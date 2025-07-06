@@ -7,7 +7,7 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
 
     const currencySymbol = '₹'
-    const backendUrl = 'https://vaxtrackhost.onrender.com'
+    const backendUrl = 'http://localhost:4000'
 
     // const [doctors, setDoctors] = useState([])
     const [hospitals, setHospitals] = useState([])

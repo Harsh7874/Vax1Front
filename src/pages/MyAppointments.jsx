@@ -148,7 +148,6 @@ const MyAppointments = () => {
                             {!item.cancelled && item.payment && !item.isCompleted && <button className='sm:min-w-48 py-2 border rounded text-[#696969]  bg-[#EAEFFF]'>Paid</button>}
 
                             
-                            {item.isCompleted && <button className='sm:min-w-48 py-2 border border-green-500 rounded text-green-500'>Download</button>}
                             {item.isCompleted && <p className='sm:min-w-48 py-2 text-black-500'>Vaccination Completed</p>}
 
                             {!item.cancelled && !item.isCompleted && <button onClick={() => cancelAppointment(item._id)} className='text-[#696969] sm:min-w-48 py-2 border rounded hover:bg-red-600 hover:text-white transition-all duration-300'>Cancel appointment</button>}

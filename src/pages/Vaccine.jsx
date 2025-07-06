@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import  { AppContext } from '../context/AppContext';
+
+
 
 const Vaccines = () => {
   const [vaccines, setVaccines] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { backendUrl, token } = useContext(AppContext)
+
 
   // Fetch data from API
   useEffect(() => {
     const fetchVaccines = async () => {
       try {
-        const response = await fetch('https://vaxtrackhost.onrender.com/api/vaccine/list');
+        const response = await fetch(backendUrl + '/api/vaccine/list');
         if (!response.ok) throw new Error('Failed to fetch vaccines');
         const data = await response.json();
         if (data.success) {
@@ -67,10 +72,7 @@ const Vaccines = () => {
           return (
             <div key={vaccine._id} className="border p-4 rounded">
               <h2 className="text-xl font-semibold">{vaccine.name.toUpperCase()}</h2>
-              <p><strong className="text-gray-600">Usage:</strong> {details.VaccineUsage}</p>
-              <p><strong className="text-gray-600">Min Age:</strong> {details.VaccineMinAge}</p>
-              <p><strong className="text-gray-600">About:</strong> {details.AboutVaccine}</p>
-              <p><strong className="text-gray-600">Side Effects:</strong> {details.SideEffects}</p>
+              <h2 className="text-l font-light">{vaccine.description.toUpperCase()}</h2>
             </div>
           );
         })}

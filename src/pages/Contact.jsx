@@ -15,9 +15,9 @@ const Contact = () => {
           <p className=' font-semibold text-lg text-gray-600'>OUR OFFICE</p>
           <p className=' text-gray-500'>VaxTrack HealthTech Pvt. Ltd. <br /> Suite 350, Washington, USA<br/> Science City Road, Ahmedabad, Gujarat – 380060, India</p>
           <p className=' text-gray-500'>📞 Tel: +91-98765-43210 <br />📧 Email: support@VaxTrack.in</p>
-          <p className=' font-semibold text-lg text-gray-600'>CAREERS AT VaxTrack</p>
+          <p className=' font-semibold text-lg text-gray-600'>At VaxTrack</p>
           <p className=' text-gray-500'>Learn more about our teams and job openings.</p>
-          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore Jobs</button>
+          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>MORE ABOUT US</button>
         </div>
       </div>
 

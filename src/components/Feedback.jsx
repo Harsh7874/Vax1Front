@@ -14,7 +14,7 @@ const FeedbackPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://vaxtrackhost.onrender.com/api/user/feedback', {
+      const response = await axios.post('http://localhost:4000/api/user/feedback', {
         userId,
         starcount: rating,
         feedback: comment

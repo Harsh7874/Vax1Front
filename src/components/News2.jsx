@@ -7,14 +7,13 @@ const News2 = () => {
   const [newsData, setNewsData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const API_KEY = '9c3ed8ee95884dec979460a60f96675b'; // Move to .env for production
 
   const getData = async () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(
-        `https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`
+      const response = await fetch( `https://newsapi.org/v2/everything?q=${search}&apiKey=9c3ed8ee95884dec979460a60f96675b`
+        
       );
       if (!response.ok) {
         throw new Error('Failed to fetch vaccine news');
